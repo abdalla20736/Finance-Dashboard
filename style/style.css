@@ -8,6 +8,7 @@ html {
 }
 * {
   font-family: var(--default-font-family), sans-serif;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   color: var(--default-text-color);
   margin: 0;
@@ -34,6 +35,8 @@ aside {
   display: none;
 }
 .main-navbar li {
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
   border-radius: 8px;
 }
@@ -49,11 +52,15 @@ aside {
 }
 
 .navbar-buttons-container .button-navbar {
+  -webkit-transition: 0.3s all;
+  -o-transition: 0.3s all;
   transition: 0.3s all;
   cursor: pointer;
 }
 
 .navbar-buttons-container .button-navbar:hover {
+  -webkit-transform: translateX(3px);
+  -ms-transform: translateX(3px);
   transform: translateX(3px);
   background-color: #fafafa;
   border-radius: 12px;
@@ -96,22 +103,28 @@ aside {
 }
 
 .account {
+  -webkit-backdrop-filter: blur(5px);
   backdrop-filter: blur(5px);
 }
 
 .account-info .avatar {
   padding: 8px 12px;
   height: 50px;
+  -webkit-transition: all 0.2;
+  -o-transition: all 0.2;
   transition: all 0.2;
 }
 
 .account-info .avatar:hover {
+  -webkit-box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 .account-info .functions button {
   width: 32px;
   height: 32px;
   background-color: #f9fafb;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -143,10 +156,13 @@ aside {
   width: 8px;
   height: 8px;
   background-color: #32d472;
+  -webkit-animation: Pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
   animation: Pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
 }
 
 .recent-activities button {
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -189,13 +205,18 @@ aside {
 .budget-item-card {
   background-color: #f9fafb80;
   border: 1px solid #e5e7ebcc;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 .budget-item-card:hover {
   background: #f3f4f6cc;
   border-color: #d1d5dbe6;
+  -webkit-transform: translateY(-1px);
+  -ms-transform: translateY(-1px);
   transform: translateY(-1px);
+  -webkit-box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
   box-shadow: 0 4px 6px -1px #0000001a, 0 2px 4px -1px #0000000f;
 }
 
@@ -231,7 +252,11 @@ aside {
 }
 
 .income-charts .chart-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
   align-items: flex-end;
   height: 160px;
 }
@@ -251,15 +276,23 @@ aside {
 }
 
 .bank-card .card-parts {
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
+  -webkit-transition: -webkit-transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
+  transition: -webkit-transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
+  -o-transition: transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
   transition: transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
+  transition: transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1),
+    -webkit-transform 0.7s cubic-bezier(0.2, 0.9, 0.3, 1);
 }
 .bank-card:hover .card-parts {
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
 }
 
 .bank-card .front {
   padding: 28px;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   z-index: 2;
 }
@@ -272,13 +305,13 @@ aside {
 .bank-card .front .sim-card-outter {
   width: 48px;
   height: 32px;
-  background-color: color-mix(in oklab, white 20%, transparent);
+  background-color: color-mix(in srgb, white 20%, transparent);
 }
 
 .bank-card .front .sim-card-inner {
   width: 24px;
   height: 16px;
-  background-color: color-mix(in oklab, white 40%, transparent);
+  background-color: color-mix(in srgb, white 40%, transparent);
 }
 
 .bank-card .front .selected-card-badge {
@@ -301,12 +334,23 @@ aside {
   right: 0;
   bottom: 0;
   z-index: 1;
+  -webkit-transform: rotateY(180deg);
   transform: rotateY(180deg);
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 
 .bank-card .back .card-gradient {
   height: 52px;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#000),
+    color-stop(40%, #111),
+    to(#2b2b2b)
+  );
+  background: -o-linear-gradient(left, #000, #111 40%, #2b2b2b);
   background: linear-gradient(90deg, #000, #111 40%, #2b2b2b);
   margin-top: 6px;
 }
@@ -329,10 +373,21 @@ aside {
 }
 
 .bank-card .gray-line {
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#0000000f),
+    color-stop(#0000002e),
+    to(#0000000f)
+  );
+  background: -o-linear-gradient(left, #0000000f, #0000002e, #0000000f);
   background: linear-gradient(90deg, #0000000f, #0000002e, #0000000f);
   border-radius: 2px;
   width: 86%;
   height: 12px;
+  -webkit-transform: skew(-10deg);
+  -ms-transform: skew(-10deg);
   transform: skew(-10deg);
 }
 
@@ -345,6 +400,16 @@ aside {
 
 .bank-card .cvv-div {
   margin-top: 12px;
+}
+
+@-webkit-keyframes Pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
 }
 
 @keyframes Pulse {
