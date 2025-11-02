@@ -33,6 +33,13 @@ aside {
   height: 100vh;
   display: none;
 }
+.main-navbar li {
+  transition: all 0.3s;
+  border-radius: 8px;
+}
+.main-navbar ul li:hover {
+  background-color: #f9fafb;
+}
 .nav-logo {
   margin-bottom: 32px;
 }
