@@ -6,7 +6,7 @@ A modern and responsive **Finance Dashboard** for tracking income, expenses, and
 ---
 
 ## 🚀 Live Demo  
-👉 [finance-dashboard-page.netlify.app](https://finance-dashboard-page.netlify.app/)
+👉 [https://abdalla20736.github.io/Finance-Dashboard/](https://abdalla20736.github.io/Finance-Dashboard/)
 
 ---
 
